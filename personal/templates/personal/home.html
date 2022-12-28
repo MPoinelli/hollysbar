@@ -66,6 +66,14 @@
         {% endif %}
         <br>
 
+        
+        <!-- Right "create post" bar  
+            DOESNT WORK, it looks like the bar remains even if I shrink the page
+        <div class="create-post-bar d-lg-none col-lg-7 offset-lg-1s" style="border: 1px solid #000;">
+            <a href="{% url 'blog:create' %}">Create post</a>
+        </div>
+         End Right "create post" bar -->
+
         <!-- Blog feed -->
         <div class="left-column col-lg-8 offset-lg-1"  style="border: 1px solid #000;">
             <div class="blog-post-container">
@@ -93,7 +101,7 @@
                 <p> Stuff </p>
                 <p> Stuff </p>
                 <p> Stuff </p>
-                <a href="#">Create post</a>
+                <a href="{% url 'blog:create' %}">Create post</a>
             </div>
         </div>
         <!-- End Right "create post" column -->
