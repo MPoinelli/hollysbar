@@ -36,13 +36,16 @@
 		font-size: 17px;
 	}
 </style>
+
+
+<!-- main content -->
 <div class="container">
 	<div class="row">
 
 		<!-- blog feed -->
 		<div class="left-column col-lg-7 offset-lg-1">
 
-			<!-- Top 'create post' bar 
+			<!-- Top 'create post' bar -->
 			<div class="d-lg-none mb-3">
 				<div class="card m-auto d-flex flex-column p-3">
 					<img class="img-fluid d-block m-auto pb-2" src="{% static 'codingwithmitch_logo.png' %}" width="72" height="72">
@@ -51,7 +54,7 @@
 					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Create post</a></p>
 				</div>
 			</div>
-			end Top 'create post' bar -->
+			<!-- end Top 'create post' bar -->
 
 			<!-- Blog posts-->
 			{% if blog_posts %}
@@ -66,11 +69,13 @@
 				</div>
 			{% endif %}
 			<!-- End Blog posts-->
-			
-			<!-- Pagination -->
-			{% include 'blog/snippets/blog_post_pagination.html' with blog_posts=blog_posts %}
+
+		<!-- Pagination -->
+		{% include 'blog/snippets/blog_post_pagination.html' with blog_posts=blog_posts %}
+
 		</div>
 		<!-- end blog feed -->
+
 
 		<!-- Right 'create post' column  -->
 		<div class="right-column col-lg-3 d-lg-flex d-none flex-column">
@@ -84,6 +89,8 @@
 		
 		</div>
 		<!-- end Right 'create post' column  -->
+
+
 
 	</div>
 </div>
